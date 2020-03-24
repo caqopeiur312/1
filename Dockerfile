@@ -11,6 +11,6 @@ RUN chmod +x /configure.sh
 ADD run.sh /run.sh
 RUN chmod +x run.sh
 
-ENTRYPOINT run.sh
+ENTRYPOINT /run.sh
 
 EXPOSE ${V2RAY_PORT}
