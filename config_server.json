@@ -2,19 +2,17 @@
   "log": {
     "access": "",
     "error": "",
-    "loglevel": "warning"
+    "loglevel": "debug"
   },
-  "dns": {},
-  "stats": {},
   "inbounds": [
     {
-      "port": 3333,
+      "port": $V2RAY_PORT,
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "e4a04a17-0e53-4c41-b507-034556003877",
-            "alterId": 32
+            "id": "$BACKEND_UUID",
+            "alterId": 64
           }
         ]
       },
@@ -23,36 +21,15 @@
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/veekxt_websocket_test"
+          "path": "/$V2RAY_PATH"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "tag": "direct",
       "protocol": "freedom",
       "settings": {}
-    },
-    {
-      "tag": "blocked",
-      "protocol": "blackhole",
-      "settings": {}
     }
-  ],
-  "routing": {
-    "domainStrategy": "AsIs",
-    "rules": [
-      {
-        "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "blocked"
-      }
-    ]
-  },
-  "policy": {},
-  "reverse": {},
-  "transport": {}
+  ]
 }

@@ -3,44 +3,39 @@
 # New Config
 cat > /etc/v2ray/config.json << EOF
 {
-    "inbounds": [
-        {
-            "port": $V2RAY_PORT,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "$BACKEND_UUID",
-                        "alterId": 64
-                    }
-                ]
-            }
-        },
-        {
-            "port": 8188,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "$FRONTEND_UUID",
-                        "alterId": 64
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "/$V2RAY_PATH"
-                }
-            }
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "debug"
+  },
+  "inbounds": [
+    {
+      "port": $V2RAY_PORT,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "$UUID",
+            "alterId": $ALTERID
+          }
+        ]
+      },
+      "tag": "in-0",
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/$V2RAY_PATH"
         }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "settings": {}
-        }
-    ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }
 EOF
 
