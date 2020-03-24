@@ -17,7 +17,7 @@ chgrp -R 0 /etc/v2ray \
 chmod -R g+rwX /etc/v2ray \
 
 ADD run.sh /run.sh
-RUN chmod +x run.sh
+RUN chmod +x /run.sh
 
 ENTRYPOINT /run.sh
 
