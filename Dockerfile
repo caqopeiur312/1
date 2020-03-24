@@ -1,7 +1,7 @@
 FROM alpine:3.5
 
 ENV UUID=487a616a-b0a6-4541-936c-f51467d9f610
-ENV 
+ENV ALTERID=64
 ENV V2RAY_PORT=9199
 ENV V2RAY_PATH=ray
 
@@ -18,4 +18,4 @@ ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
 ENTRYPOINT /configure.sh
 
-EXPOSE 8188 ${V2RAY_PORT}
+EXPOSE ${V2RAY_PORT}
