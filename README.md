@@ -18,3 +18,6 @@ https://kubesail.com/template/kullex/v2dock-kubesail
 ### Kubesail 端口映射
 
 请将 9199 端口作为 tcp 端口映射，将 8118 端口作为 HTTPS 映射
+
+### 客户端下载
+windows:https://cdn.jsdelivr.net/gh/v2ray/dist@master/v2ray-windows-64.zip
