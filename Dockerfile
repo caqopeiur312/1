@@ -19,6 +19,8 @@ RUN apk add --no-cache --virtual ca-certificates curl \
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 
-ENTRYPOINT /bin/sh /run.sh
 
 EXPOSE ${V2RAY_PORT}
+ENTRYPOINT /bin/sh /run.sh
+
+
