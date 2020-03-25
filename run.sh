@@ -6,7 +6,7 @@ cat >/etc/v2ray/config.json <<EOF
   "log": {
     "access": "",
     "error": "",
-    "loglevel": "debug"
+    "loglevel": "info"
   },
   "inbounds": [
     {

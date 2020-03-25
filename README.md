@@ -11,7 +11,8 @@ https://kubesail.com/template/kullex/v2dock-kubesail
 
 ### 环境变量说明：
 
-1. **UUID：** 作为前置（ws+tls）的登陆 UUID
+1. **UUID：** 作为前置（ws+tls）的登陆 UUID 可以在https://www.uuidgenerator.net/生成
+2. **ALTERID: ** 1-64之间的整数就可以了
 3. **V2RAY_PORT：** 这个其实不用改，kubesail 在映射的时候会使用随机的 tcp 端口
 4. **V2RAY_PATH：** ws 路径，不用加 `/`
 

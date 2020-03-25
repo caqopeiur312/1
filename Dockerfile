@@ -4,6 +4,7 @@ ENV UUID=487a616a-b0a6-4541-936c-f51467d9f610
 ENV ALTERID=64
 ENV V2RAY_PORT=9199
 ENV V2RAY_PATH=ray
+ENV LOGLEVEL=debug
 #-H "Cache-Control: no-cache"
 
 RUN apk add --no-cache --virtual ca-certificates curl \
